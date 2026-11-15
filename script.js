@@ -1,16 +1,18 @@
-// Fill in your details here. Empty values hide their buttons, so there are never dead links.
+// contact details and links. leave one empty and its button hides
 const me = {
-  email: "olukogbonseyi@gmail.com",      // e.g. "you@gmail.com"
-  whatsapp: "2349115611503",   // digits only with country code, e.g. "2348012345678"
-  github: "olukogbonseyi",     // your GitHub username
-  links: { fintech: "https://www.figma.com/design/nhdKMHMG5PgE1Famx14RHv/SEYIS-IT-JOURNEY?node-id=0-1&t=oRBZmRcHZdIoQAb7-1", brewBean: "https://www.figma.com/design/nhdKMHMG5PgE1Famx14RHv/SEYIS-IT-JOURNEY?node-id=0-1&t=oRBZmRcHZdIoQAb7-1" } // Figma prototype / live site URLs
+  email: "olukogbonseyi@gmail.com",
+  whatsapp: "2349115611503",
+  github: "olukogbonseyi",
+  links: { fintech: "https://www.figma.com/design/nhdKMHMG5PgE1Famx14RHv/SEYIS-IT-JOURNEY?node-id=0-1&t=oRBZmRcHZdIoQAb7-1", brewBean: "https://www.figma.com/design/nhdKMHMG5PgE1Famx14RHv/SEYIS-IT-JOURNEY?node-id=0-1&t=oRBZmRcHZdIoQAb7-1",
+    sante: "https://github.com/olukogbonseyi/sante-lims" }
 };
 const msg = encodeURIComponent("Hi Oluseyi, I saw your portfolio and I'd like to talk.");
 const href = {
   email: me.email && `mailto:${me.email}?subject=Hello%20Oluseyi`,
   whatsapp: me.whatsapp && `https://wa.me/${me.whatsapp}?text=${msg}`,
   github: me.github && `https://github.com/${me.github}`,
-  fintech: me.links.fintech, brewBean: me.links.brewBean
+  fintech: me.links.fintech, brewBean: me.links.brewBean,
+  sante: me.links.sante
 };
 document.querySelectorAll("[data-link]").forEach(el => {
   const url = href[el.dataset.link];
